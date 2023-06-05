@@ -7,7 +7,8 @@ print('<h2 class="title is-2">Deadlines</h2>\n')
 
 for task in things.deadlines():
     pr_tag = '<span class="tag">project</span>' if task['type'] == 'project' else ""
-    print('- ', pr_tag, task['title'], "(**!", task['deadline'], "**)")
+    project_suffix = '<span class="content is-small">  ({})</span>'.format(task['project_title']) if 'project_title' in task else ''
+    print('- ', pr_tag, task['title'], project_suffix, "(**!", task['deadline'], "**)")
 print("")
 
 print('<h2 class="title is-2">Next</h2>\n')
