@@ -22,7 +22,7 @@ for t in ['Computer👨\u200d💻', 'planen/denken🪧', 'schreiben📝',
     for task in things.anytime(tag=t):
         if task['type'] != "to-do":
             continue
-        if "project_title" in task and task['project_title'] == "Template project for travel":
+        if 'heading_title' in task and (task['heading_title'] == 'Reisevorbereitung' or task['heading_title'] == "Nach der Reise"):
             continue
         if "area_title" in task and task["area_title"] == "Command Center":
             continue
