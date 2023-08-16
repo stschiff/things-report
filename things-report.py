@@ -13,11 +13,11 @@ print("")
 
 print('<h2 class="title is-2">Next</h2>\n')
 
-for t in ['Computer👨\u200d💻', 'planen/denken🪧', 'schreiben📝',
-          'Recherche🔬', 'Email/Chat📧', 'lesen📖', 'Anrufe📞', 'unterwegs🏃🏽',
+for t in ['Computer👨\u200d💻', 'coding', 'planen/denken🪧', 'Recherche🔬',
+          'Email/Chat📧', 'lesen📖', 'Phone📞', 'unterwegs🏃🏽',
           'daheim🏡', 'Institut🏢', 'Warten auf⌛️',
           'Arbeitsgruppe👩\u200d🚀', 'Weitere Kollegen👥', 'Meetings🗣️',
-          'Maria🙋\u200d♀️', 'Tickler⏰', 'Ideen💡']:
+          'Maria🙋\u200d♀️', 'Tickler⏰']:
     print('<h3 class="title is-3">{}</h3>\n'.format(t))
     for task in things.anytime(tag=t):
         if task['type'] != "to-do":
